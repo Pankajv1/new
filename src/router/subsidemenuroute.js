@@ -1,0 +1,10 @@
+const express = require('express');
+const route = new express.Router();
+ const SubsidemenuController = require('../controllers/SubsidemenuController');
+  route.get('/list_subsidemenu',SubsidemenuController.list);
+  route.post('/save_subsidemenu',SubsidemenuController.savesubsidemenu);
+  route.delete('/delete_subsidemenu/:id',SubsidemenuController.deletesubsidemenu);
+  route.get('/subsidemenu_by_sidemenu/:id',SubsidemenuController.subsidemenubysidemenu);
+  route.get('/single_subsidemenu/:id',SubsidemenuController.singlesidemenu);
+  route.patch('/update_subsidemenu/:id',SubsidemenuController.updatesubsidemenu);
+module.exports = route;

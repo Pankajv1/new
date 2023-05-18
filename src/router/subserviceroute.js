@@ -1,0 +1,10 @@
+const express = require('express');
+const route = new express.Router();
+ const SubserviceController = require('../controllers/SubserviceController');
+  route.get('/list_subservice',SubserviceController.list);
+  route.post('/save_subservice',SubserviceController.savesubserice);
+  route.delete('/delete_subservice/:id',SubserviceController.deletesubservice);
+  route.patch('/update_subsidemenu/:id',SubserviceController.updatesubservice);
+  route.get('/subserviceID/:id',SubserviceController.singlesubservice);
+  route.get('/subservice_by_serviceID/:id',SubserviceController.subservicebyservice);
+module.exports = route;
